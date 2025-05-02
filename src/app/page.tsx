@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { BookOpen, CheckSquare, FileText, GraduationCap, SquareCheckBig } from "lucide-react"; // Changed icon, added SquareCheckBig for Checklist
+import { BookOpen, CheckSquare, FileText, GraduationCap, SquareCheckBig, ShieldAlert, FlaskConical, ClipboardCheck } from "lucide-react"; // Added ClipboardCheck
 
 export default function Dashboard() {
   // Mock data - replace with real data fetching later
@@ -9,6 +9,8 @@ export default function Dashboard() {
   const pendingReviewCount = 2; // Example
   const checklistsAvailableCount = 12; // Example
   const pendingReportsCount = 3; // Example
+   const oshaTrainingModulesCount = 6; // Example, based on 6 OSHA-related modules
+   const availableSurveysCount = 4; // Example
 
   return (
     <div className="space-y-6">
@@ -17,7 +19,7 @@ export default function Dashboard() {
         Welcome to CleanSweep! Manage training, checklists, and inspections efficiently.
       </p>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"> {/* Adjusted grid columns */}
         <Card className="hover:shadow-md transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
@@ -67,7 +69,40 @@ export default function Dashboard() {
             <Button asChild size="sm" className="mt-4"><Link href="/inspections">View Reports</Link></Button>
           </CardContent>
         </Card>
+
+        <Card className="hover:shadow-md transition-shadow">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium flex items-center gap-2">
+              <ShieldAlert className="w-4 h-4 text-muted-foreground" /> OSHA Safety Training
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{oshaTrainingModulesCount} Modules Available</div>
+            <p className="text-xs text-muted-foreground">
+              HazCom, PPE, BBP, Fall Protection...
+            </p>
+             <Button asChild size="sm" className="mt-4"><Link href="/training/modules">Explore OSHA Modules</Link></Button>
+          </CardContent>
+        </Card>
+
+        {/* New Joint Commission Survey Card */}
+         <Card className="hover:shadow-md transition-shadow">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium flex items-center gap-2">
+              <ClipboardCheck className="w-4 h-4 text-muted-foreground" /> Joint Commission Surveys
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{availableSurveysCount} Survey Types</div>
+            <p className="text-xs text-muted-foreground">
+              Prepare for and track TJC surveys.
+            </p>
+             {/* Link to inspections page as placeholder for surveys */}
+             <Button asChild size="sm" variant="secondary" className="mt-4"><Link href="/inspections">Manage Surveys</Link></Button>
+          </CardContent>
+        </Card>
       </div>
+
 
        <Card>
          <CardHeader>
