@@ -110,7 +110,7 @@ async function getModuleDetails(moduleId: string): Promise<TrainingModule | null
         regulations: ['JC', 'CDC', 'OSHA'],
         completed: false, // Example: User has NOT completed this one yet
         resources: [
-            {name: 'CDC Guideline for Disinfection and Sterilization', url: 'https://www.cdc.gov/infectioncontrol/guidelines/disinfection/index.html'},
+            {name: 'CDC Guideline for Disinfection and Sterilization', url: 'https://www.cdc.gov/infection-control/hcp/guidance/index.html/Disinfection_Nov_2008.pdf'}, // Updated Link
             {name: 'Joint Commission Infection Prevention and Control (IC) Standards', url: 'https://www.jointcommission.org/standards/standard-faqs/hospital-and-hospital-clinics/infection-prevention-and-control-ic/'},
             {name: 'CDC Hand Hygiene in Healthcare Settings', url: 'https://www.cdc.gov/handhygiene/'}
         ],
@@ -310,3 +310,5 @@ export default async function TrainingModuleDetailPage({ params }: { params: { m
     </div>
   );
 }
+
+    
