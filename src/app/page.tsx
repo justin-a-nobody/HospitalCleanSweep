@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -80,8 +79,4 @@ export default function Dashboard() {
 
     </div>
   );
-=======
-export default function Home() {
-  return <></>;
->>>>>>> 5edd04a (initial scaffold)
 }
