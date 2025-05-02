@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { PlusCircle, Users, ShieldAlert, Building, ChevronRight, ArrowLeft, AlertTriangle } from "lucide-react";
+import { PlusCircle, Users, ShieldAlert, Building, ChevronRight, ArrowLeft, AlertTriangle, Footprints } from "lucide-react"; // Added Footprints
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -48,6 +48,13 @@ async function getTrainTheTrainerModulesSummary(): Promise<TrainTheTrainerModule
         description: 'Develop leadership skills for trainers, focusing on effective communication, coaching, and delivering impactful training sessions for EVS staff.',
         focusAreas: ['Training Delivery', 'Coaching Techniques', 'Feedback Methods', 'Adult Learning', 'EVS Task Training'],
         icon: Users,
+    },
+    { // Added Fall Protection TTT module
+        id: 'ttt004',
+        title: 'Training on OSHA Fall Protection (Walking-Working Surfaces)',
+        description: 'Instruct trainers on teaching EVS staff about fall hazards like slips, trips, and ladder safety.',
+        focusAreas: ['Fall Hazard Recognition', 'Ladder Safety Training', 'Spill/Housekeeping Protocols', 'OSHA Subpart D'],
+        icon: Footprints,
     },
   ];
 

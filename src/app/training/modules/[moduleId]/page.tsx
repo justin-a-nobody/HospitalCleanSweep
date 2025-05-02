@@ -177,6 +177,33 @@ async function getModuleDetails(moduleId: string): Promise<TrainingModule | null
             { id: 'q503', question: 'Improperly labeled cleaning chemicals would likely be cited under which TJC standard area?', options: ['Primarily IC', 'Primarily EOC (specifically Hazardous Materials)', 'Both equally', 'Neither'], correctAnswerIndex: 1},
         ]
     },
+    { // New Fall Protection Module
+        id: 'tm006',
+        title: 'OSHA Fall Protection Awareness for EVS',
+        description: 'Understanding and mitigating fall hazards in the healthcare environment (Walking-Working Surfaces).',
+        sections: [
+            { title: 'Introduction to Fall Hazards', text: 'Falls are a leading cause of workplace injuries. In hospitals, EVS staff face risks from wet floors, clutter, improper ladder use, and working near elevated surfaces. This module covers OSHA\'s requirements for protecting workers (primarily 29 CFR 1910 Subpart D - Walking-Working Surfaces).' },
+            { title: 'Slips, Trips, and Falls', text: 'Common causes:\n• Slips: Wet floors (mopping, spills), greasy surfaces, loose mats.\n• Trips: Clutter in walkways, cords, uneven surfaces, poor lighting.\n• Falls: Improper ladder/stepladder use, working near unprotected edges, unstable equipment.\nPrevention starts with good housekeeping and awareness.' },
+            { title: 'Housekeeping and Hazard Recognition', text: '• Keep walkways, aisles, and corridors clear of equipment, carts, supplies, and cords.\n• Clean up spills IMMEDIATELY using proper procedures and signage ("Wet Floor" signs).\n• Ensure adequate lighting in work areas.\n• Report damaged flooring, loose tiles, or worn carpet promptly.\n• Use non-slip footwear suitable for the environment.' },
+            { title: 'Safe Use of Ladders and Stepladders', text: '• Inspect ladders before each use for damage (broken rungs, cracks, loose parts).\n• Choose the right ladder for the job (height, duty rating).\n• Place ladders on a stable, level surface.\n• Maintain three points of contact (two feet and one hand, or two hands and one foot) when climbing/descending.\n• Do NOT stand on the top step/cap of a stepladder.\n• Do NOT overreach; move the ladder instead.\n• Secure ladders when necessary; avoid placing them in high-traffic areas without barriers.' },
+            { title: 'Floor Openings and Elevated Surfaces', text: '• Be aware of floor openings, pits, or service areas. Ensure they are properly guarded (covers, guardrails).\n• Report any missing or damaged guardrails or covers immediately.\n• Exercise caution when working near loading docks or other unprotected edges.' },
+            { title: 'Reporting Hazards', text: 'It is YOUR responsibility to report any fall hazard you identify immediately to your supervisor. This includes spills, clutter, damaged equipment (like ladders), or unsafe conditions.' },
+        ],
+        regulations: ['OSHA'],
+        completed: false,
+        resources: [
+            { name: 'OSHA Walking-Working Surfaces Standard (29 CFR 1910 Subpart D)', url: 'https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.22' }, // General duty link, specific standards within
+            { name: 'OSHA FactSheet: Fall Protection in General Industry', url: 'https://www.osha.gov/sites/default/files/publications/OSHA3666.pdf' },
+            { name: 'OSHA Ladder Safety Guidance', url: 'https://www.osha.gov/ladder-safety' },
+            { name: 'OSHA Slip, Trip, and Fall Prevention Info', url: 'https://www.osha.gov/preventing-slips-trips-falls' }
+        ],
+        quiz: [
+            { id: 'q601', question: 'What is the FIRST thing you should do if you discover a liquid spill on the floor?', options: ['Ignore it if it\'s small', 'Mop it up when you have time', 'Place a "Wet Floor" sign and clean it up immediately following procedure', 'Wait for someone else to clean it'], correctAnswerIndex: 2 },
+            { id: 'q602', question: 'When using a stepladder, where should you NOT stand?', options: ['The bottom step', 'The middle step', 'The top step/cap', 'Any step is fine'], correctAnswerIndex: 2 },
+            { id: 'q603', question: 'Maintaining "three points of contact" on a ladder means:', options: ['Holding tools in both hands', 'Having two feet and one hand OR one foot and two hands on the ladder', 'Leaning your body against the ladder', 'Having three people spot you'], correctAnswerIndex: 1 },
+            { id: 'q604', question: 'Which of the following is a common TRIP hazard for EVS staff?', options: ['A freshly mopped floor', 'Electrical cords across a walkway', 'A properly labeled chemical container', 'Good lighting'], correctAnswerIndex: 1 },
+        ]
+    },
   ];
   const module = modules.find(m => m.id === moduleId);
 

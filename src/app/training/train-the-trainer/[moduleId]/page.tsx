@@ -3,7 +3,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowLeft, Check, ExternalLink, ShieldAlert, Building, Users, AlertTriangle } from "lucide-react";
+import { ArrowLeft, Check, ExternalLink, ShieldAlert, Building, Users, AlertTriangle, Footprints } from "lucide-react"; // Added Footprints icon for Fall Protection
 import { Separator } from "@/components/ui/separator";
 import Quiz from "@/components/training/quiz"; // Import Quiz, though not used yet for TTT
 import { cn } from "@/lib/utils";
@@ -164,6 +164,46 @@ async function getTrainTheTrainerModuleDetails(moduleId: string): Promise<TrainT
             { name: 'Article: Applying Adult Learning Principles', url: 'https://www.td.org/insights/applying-adult-learning-principles-to-training-design', type: 'Guide' }, // Example article
             { name: 'Guide: Giving Constructive Feedback', url: 'https://hbr.org/2017/05/how-to-give-feedback-people-can-actually-use', type: 'Guide' }, // Example guide
             { name: 'Book: "Made to Stick" (Example on communication)', url: '#', type: 'Guide' }, // Placeholder book
+        ],
+    },
+    { // New Fall Protection TTT Module
+        id: 'ttt004',
+        title: 'Training on OSHA Fall Protection (Walking-Working Surfaces)',
+        description: 'Instruct trainers on how to teach EVS staff about recognizing and mitigating common fall hazards like slips, trips, and falls from ladders or surfaces.',
+        icon: Footprints, // Using Footprints icon for walking surfaces
+        focusAreas: ['Fall Hazard Recognition', 'Ladder Safety Training', 'Spill/Housekeeping Protocols', 'OSHA Subpart D'],
+        sections: [
+            {
+                title: 'Understanding Fall Hazards in EVS',
+                text: 'Review the prevalence and severity of falls in healthcare. Discuss specific risks EVS staff face: mopping, spills, cords, clutter, using step stools/ladders for high dusting/cleaning, working near floor openings or docks. Introduce OSHA\'s Walking-Working Surfaces standard (29 CFR 1910 Subpart D) as the primary regulation.',
+                teachingTip: 'Use hospital-specific data on EVS injuries if available. Show pictures of common hazards in an EVS context (e.g., mop bucket blocking a doorway, cord across hall, cluttered supply closet). Ask trainers to share experiences or near-misses.'
+            },
+            {
+                title: 'Teaching Slip and Trip Prevention',
+                text: 'Trainers must emphasize:\n• Immediate Spill Response: The critical importance of cordoning off (wet floor signs) and cleaning spills IMMEDIATELY. Review facility spill clean-up procedures.\n• Proper Mopping Technique: Using signs, mopping sections at a time if possible, ensuring floors dry quickly or are barricaded.\n• Cord Management: Keeping electrical cords out of walkways, using cord covers if necessary.\n• Good Housekeeping: Maintaining clear, uncluttered paths in patient rooms, hallways, and supply areas. Proper storage of carts and equipment.\n• Appropriate Footwear: Reinforce facility policy on required non-slip shoes.',
+                teachingTip: 'Demonstrate the correct procedure for placing "Wet Floor" signs (before mopping/cleaning, visible from all approaches). Role-play a scenario where a staff member encounters a spill. Discuss strategies for managing cords from floor buffers or vacuums.'
+            },
+            {
+                title: 'Instructing on Ladder and Stepladder Safety',
+                text: 'Trainers need to teach EVS staff:\n• Pre-Use Inspection: How to check ladders for damage (cracks, loose rungs, non-slip feet intact).\n• Proper Setup: Level ground, fully opened spreader bars (stepladders), correct angle (extension ladders - rarely used by EVS, but cover if applicable).\n• Safe Climbing Practices: Maintaining three points of contact, facing the ladder, carrying tools in belts/bags, not overreaching.\n• Key Prohibitions: NEVER stand on the top step/cap or pail shelf of a stepladder. Do not exceed the ladder\'s weight limit. Do not use near doorways without securing/barricading.\n• Reporting Damaged Ladders: Removing damaged ladders from service immediately and reporting to supervisor.',
+                teachingTip: 'Use actual ladders (step stools, stepladders common for EVS) for demonstration. Have trainees practice inspecting a ladder and identifying potential defects. Demonstrate the three-points-of-contact rule and the danger of overreaching or standing on the top cap. Create a simple ladder safety checklist for staff.'
+            },
+            {
+                title: 'Awareness of Floor Openings and Edges',
+                text: 'Trainers should cover:\n• Identifying potential fall hazards like loading docks, service pits, or unguarded floor openings.\n• The importance of guardrails, covers, and warning lines.\n• Reporting any missing or damaged protective measures immediately.\n• Maintaining safe distances from unprotected edges.',
+                teachingTip: 'Use facility maps or photos to highlight areas with potential fall-from-height risks relevant to EVS staff access (e.g., storage mezzanines, loading docks). Emphasize situational awareness.'
+            },
+            {
+                title: 'Reinforcing Hazard Reporting',
+                text: 'Stress the importance of a proactive safety culture. All staff, including EVS, have a responsibility to identify and report fall hazards promptly using the facility\'s established reporting mechanism. Trainers should ensure staff know how and whom to report to.',
+                teachingTip: 'Review the facility\'s specific hazard reporting process. Use scenarios: "What would you do if you saw a frayed electrical cord?" or "Who do you tell if a guardrail seems loose?".'
+            },
+        ],
+        resources: [
+            { name: 'OSHA Walking-Working Surfaces Standard', url: 'https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.22', type: 'Regulation' },
+            { name: 'OSHA Ladder Safety Guidance', url: 'https://www.osha.gov/ladder-safety', type: 'Guide' },
+            { name: 'OSHA Slip, Trip, and Fall Prevention Info', url: 'https://www.osha.gov/preventing-slips-trips-falls', type: 'Guide' },
+            { name: 'OSHA FactSheet: Protecting Workers from Slips, Trips, and Falls', url: 'https://www.osha.gov/sites/default/files/publications/OSHA3900.pdf', type: 'Tool' },
         ],
     },
   ];

@@ -52,6 +52,7 @@ async function getTrainingModulesSummary(): Promise<TrainingModuleSummary[]> {
         { id: 'tm003', title: 'Infection Control & Prevention', description: 'EVS role in preventing Healthcare-Associated Infections (HAIs).', regulations: ['JC', 'CDC', 'OSHA'], completed: false, hasQuiz: true /*, prerequisiteId: 'tm002'*/ },
         { id: 'tm004', title: 'Using Personal Protective Equipment (PPE)', description: 'Proper selection, use, and disposal of PPE.', regulations: ['OSHA', 'CDC'], completed: false, hasQuiz: true /*, prerequisiteId: 'tm003'*/ },
         { id: 'tm005', title: 'Joint Commission EVS Standards Focus', description: 'Key Environment of Care (EOC) and Infection Control (IC) requirements.', regulations: ['JC'], completed: false, hasQuiz: true /*, prerequisiteId: 'tm004'*/ },
+        { id: 'tm006', title: 'OSHA Fall Protection Awareness for EVS', description: 'Understanding and mitigating fall hazards in the healthcare environment.', regulations: ['OSHA'], completed: false, hasQuiz: true /*, prerequisiteId: 'tm005'*/ }, // Added Fall Protection
     ];
 
     return trainingModulesSummary;
