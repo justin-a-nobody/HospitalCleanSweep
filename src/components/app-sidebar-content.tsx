@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -11,7 +12,7 @@ import {
   SidebarSeparator,
   SidebarFooter,
 } from '@/components/ui/sidebar';
-import { BookOpen, CheckSquare, FileText, Home, Settings, LifeBuoy, GraduationCap } from 'lucide-react'; // Added GraduationCap
+import { BookOpen, CheckSquare, FileText, Home, Settings, LifeBuoy, GraduationCap, Users } from 'lucide-react'; // Added Users icon
 import { cn } from '@/lib/utils';
 
 export default function AppSidebarContent() {
@@ -22,7 +23,7 @@ export default function AppSidebarContent() {
     if (exact) {
       return pathname === path;
     }
-    // For nested routes like /training/modules/*
+    // For nested routes like /training/*
     return pathname.startsWith(path);
   };
 
@@ -46,6 +47,8 @@ export default function AppSidebarContent() {
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
+
+          {/* Training Section */}
            <SidebarMenuItem>
             <SidebarMenuButton
               asChild
@@ -63,14 +66,31 @@ export default function AppSidebarContent() {
               asChild
               // isActive should check for /training/modules and its children
               isActive={isActive('/training/modules')}
-              tooltip={{ children: 'Training Modules', side: 'right' }}
+              tooltip={{ children: 'EVS Training Modules', side: 'right' }}
             >
-              <Link href="/training/modules"> {/* Link to the modules list */}
+              <Link href="/training/modules"> {/* Link to the EVS modules list */}
                 <BookOpen />
-                <span>Training Modules</span>
+                <span>EVS Staff Modules</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
+           <SidebarMenuItem>
+            <SidebarMenuButton
+              asChild
+              // isActive should check for /training/train-the-trainer and its children
+              isActive={isActive('/training/train-the-trainer')}
+              tooltip={{ children: 'Train the Trainer Modules', side: 'right' }}
+            >
+              <Link href="/training/train-the-trainer"> {/* Link to the TTT modules list */}
+                <Users />
+                <span>Train the Trainer</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+
+           <SidebarSeparator />
+
+          {/* Other Sections */}
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
