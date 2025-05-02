@@ -1,0 +1,170 @@
+[
+  {
+    "item_number": 1,
+    "task": "Clean and disinfect all horizontal surfaces (e.g. countertops, work surfaces, etc.)",
+    "responsible_party": "EVS",
+    "frequency": "Daily",
+    "details": "Clean with a disinfectant cleaner. Ensure all surfaces are visibly clean."
+  },
+  {
+    "item_number": 2,
+    "task": "Clean and disinfect all vertical surfaces (e.g. walls, back of cabinets, etc.)",
+    "responsible_party": "EVS",
+    "frequency": "Weekly",
+    "details": "Clean with a disinfectant cleaner. Ensure all surfaces are visibly clean."
+  },
+  {
+    "item_number": 3,
+    "task": "Clean and disinfect all equipment surfaces (e.g. IV pumps, monitors, etc.)",
+    "responsible_party": "Nursing",
+    "frequency": "Each Use",
+    "details": "Clean between each use with a disinfectant wipe. Ensure all equipment is visibly clean."
+  },
+  {
+    "item_number": 4,
+    "task": "Clean and disinfect all computer keyboards, mice, and phones",
+    "responsible_party": "EVS",
+    "frequency": "Daily",
+    "details": "Clean with a disinfectant wipe. Ensure all devices are visibly clean."
+  },
+  {
+    "item_number": 5,
+    "task": "Empty and clean all trash receptacles",
+    "responsible_party": "EVS",
+    "frequency": "Daily",
+    "details": "Empty trash, clean and re-bag. Do not overfill receptacles."
+  },
+  {
+    "item_number": 6,
+    "task": "Empty and clean all soiled linen receptacles",
+    "responsible_party": "EVS",
+    "frequency": "Daily",
+    "details": "Empty linen, clean and re-bag. Do not overfill receptacles."
+  },
+  {
+    "item_number": 7,
+    "task": "Clean all floor surfaces",
+    "responsible_party": "EVS",
+    "frequency": "Daily",
+    "details": "Clean all areas thoroughly with a mop or vacuum. Ensure all areas are visibly clean."
+  },
+  {
+    "item_number": 8,
+    "task": "Replace privacy curtains",
+    "responsible_party": "EVS",
+    "frequency": "Monthly",
+    "details": "Remove old curtains, clean tracks, and hang new curtains."
+  },
+  {
+    "item_number": 9,
+    "task": "Clean and disinfect all chairs and seating surfaces",
+    "responsible_party": "EVS",
+    "frequency": "Daily",
+    "details": "Clean all chairs with a disinfectant wipe. Ensure they are visibly clean."
+  },
+  {
+    "item_number": 10,
+    "task": "Clean and disinfect all door handles and push plates",
+    "responsible_party": "EVS",
+    "frequency": "Daily",
+    "details": "Clean all areas thoroughly with a disinfectant wipe."
+  },
+  {
+    "item_number": 11,
+    "task": "Clean and disinfect all light switches",
+    "responsible_party": "EVS",
+    "frequency": "Daily",
+    "details": "Clean with a disinfectant wipe."
+  },
+  {
+    "item_number": 12,
+    "task": "Clean and disinfect all bed frames and rails",
+    "responsible_party": "EVS",
+    "frequency": "Each Use",
+    "details": "Clean with a disinfectant wipe between each patient."
+  },
+  {
+    "item_number": 13,
+    "task": "Clean and disinfect all storage drawers and shelving",
+    "responsible_party": "EVS",
+    "frequency": "Weekly",
+    "details": "Clean all areas with a disinfectant wipe."
+  },
+  {
+    "item_number": 14,
+    "task": "Clean and disinfect all sinks and faucets",
+    "responsible_party": "EVS",
+    "frequency": "Daily",
+    "details": "Clean with a disinfectant cleaner. Ensure they are visibly clean."
+  },
+  {
+    "item_number": 15,
+    "task": "Clean and disinfect all toilets",
+    "responsible_party": "EVS",
+    "frequency": "Daily",
+    "details": "Clean with a toilet bowl cleaner. Ensure they are visibly clean."
+  },
+  {
+    "item_number": 16,
+    "task": "Restock supplies",
+    "responsible_party": "Nursing",
+    "frequency": "Daily",
+    "details": "Restock all necessary supplies (gloves, masks, paper towels, soap, etc.)."
+  },
+  {
+    "item_number": 17,
+    "task": "Clean and disinfect privacy curtains",
+    "responsible_party": "EVS",
+    "frequency": "As Needed",
+    "details": "Clean if visibly soiled or after a patient with an infectious disease."
+  },
+  {
+    "item_number": 18,
+    "task": "Clean and disinfect stretchers/gurneys",
+    "responsible_party": "EVS",
+    "frequency": "Each Use",
+    "details": "Clean all surfaces with a disinfectant wipe between each patient."
+  },
+  {
+    "item_number": 19,
+    "task": "Clean and disinfect wheelchairs",
+    "responsible_party": "EVS",
+    "frequency": "Each Use",
+    "details": "Clean all surfaces with a disinfectant wipe between each patient."
+  },
+  {
+    "item_number": 20,
+    "task": "Clean and disinfect IV poles",
+    "responsible_party": "EVS",
+    "frequency": "Each Use",
+    "details": "Clean all surfaces with a disinfectant wipe between each patient."
+  },
+  {
+    "item_number": 21,
+    "task": "Check and replace sharps containers",
+    "responsible_party": "Nursing",
+    "frequency": "Daily",
+    "details": "Check containers and replace when 3/4 full. Ensure new containers are properly labeled."
+  },
+  {
+    "item_number": 22,
+    "task": "Check and replace biohazard containers",
+    "responsible_party": "Nursing",
+    "frequency": "Daily",
+    "details": "Check containers and replace when 3/4 full. Ensure new containers are properly labeled."
+  },
+  {
+    "item_number": 23,
+    "task": "Clean and disinfect window sills",
+    "responsible_party": "EVS",
+    "frequency": "Weekly",
+    "details": "Clean with a disinfectant cleaner. Ensure they are visibly clean."
+  },
+  {
+    "item_number": 24,
+    "task": "Clean and disinfect window glass",
+    "responsible_party": "EVS",
+    "frequency": "Monthly",
+    "details": "Clean with a glass cleaner. Ensure they are visibly clean."
+  }
+]

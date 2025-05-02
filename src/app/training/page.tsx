@@ -18,7 +18,7 @@ export default function TrainingOverviewPage() {
              <p className="mt-4 text-foreground/90">
                Welcome to the CleanSweep training hub. Our program is designed to equip Environmental Services (EVS) staff with the knowledge and skills necessary to maintain the highest standards of cleanliness and safety within the hospital environment. Proper cleaning protocols are critical in preventing healthcare-associated infections (HAIs) and ensuring patient well-being.
             </p>
-          </div>
+             <p className="mt-4 text-foreground/90">For our Top 20 Hospital, our comprehensive training includes interactive scenarios, knowledge checks, Joint Commission Standards, OSHA Standards, and Life Safety.</p>          </div>
         </div>
       </section>
 
