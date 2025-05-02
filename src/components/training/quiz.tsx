@@ -194,4 +194,3 @@ const Quiz: React.FC<QuizProps> = ({ questions, moduleId }) => {
 };
 
 export default Quiz;
-```

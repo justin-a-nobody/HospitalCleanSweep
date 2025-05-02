@@ -4,6 +4,7 @@ import { PlusCircle, BookOpen, ChevronRight, AlertTriangle } from "lucide-react"
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge"; // Import Badge
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"; // Import Tooltip components
+import { cn } from "@/lib/utils"; // Import cn utility
 
 // Mock data structure enhancement (matching detail page)
 interface Resource {
@@ -101,7 +102,15 @@ export default async function TrainingModulesPage() {
                     </div>
                   </div>
                    <div className="flex flex-col items-end gap-2 ml-4 flex-shrink-0">
-                     <Badge variant={module.completed ? "default" : "outline"} className={`text-xs font-semibold px-2 py-1 rounded-full ${module.completed ? 'border-green-500/50 bg-green-500/10 text-green-700 dark:text-green-300' : 'border-yellow-500/50 bg-yellow-500/10 text-yellow-700 dark:text-yellow-300'}`}>
+                     <Badge
+                         variant={module.completed ? "default" : "outline"}
+                         className={cn(
+                             "text-xs font-semibold px-2 py-1 rounded-full",
+                              module.completed
+                                ? 'border-green-500/50 bg-green-500/10 text-green-700 dark:text-green-300'
+                                : 'border-yellow-500/50 bg-yellow-500/10 text-yellow-700 dark:text-yellow-300'
+                          )}
+                        >
                         {module.completed ? 'Completed' : 'In Progress'}
                       </Badge>
                        {/* Tooltip for disabled button */}
