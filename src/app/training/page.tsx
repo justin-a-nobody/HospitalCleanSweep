@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, ShieldCheck, Hospital, ListChecks, ArrowRight, Users } from "lucide-react"; // Added Users icon
+import { GraduationCap, ShieldCheck, Hospital, ListChecks, ArrowRight, Users, FlaskConical } from "lucide-react"; // Added Users, FlaskConical icons
 import Link from "next/link";
 import Image from "next/image"; // Import next/image
 
@@ -16,9 +16,9 @@ export default function TrainingOverviewPage() {
               Elevating Hospital Cleanliness Standards Through Comprehensive Training for Staff and Trainers.
             </p>
              <p className="mt-4 text-foreground/90">
-               Welcome to the CleanSweep training hub. Our program offers two distinct paths: one designed to equip Environmental Services (EVS) staff with essential cleaning and safety skills, and another to prepare supervisors and leads to effectively train their teams. Proper cleaning protocols are critical in preventing healthcare-associated infections (HAIs) and ensuring patient well-being.
+               Welcome to the CleanSweep training hub. Our program offers distinct paths: equipping Environmental Services (EVS) staff with essential cleaning and safety skills, preparing supervisors to train their teams effectively, and interactive simulations to practice procedures. Proper cleaning protocols are critical in preventing healthcare-associated infections (HAIs) and ensuring patient well-being.
             </p>
-             <p className="mt-4 text-foreground/90">Our comprehensive training includes interactive scenarios, knowledge checks, and covers key standards from the Joint Commission, OSHA, and Life Safety.</p>
+             <p className="mt-4 text-foreground/90">Our comprehensive training includes interactive modules, knowledge checks, realistic simulations, and covers key standards from the Joint Commission, OSHA, and Life Safety.</p>
           </div>
         </div>
       </section>
@@ -48,10 +48,10 @@ export default function TrainingOverviewPage() {
              <CardContent className="space-y-2 text-sm text-foreground/80">
                 <p>• Foundational cleaning techniques.</p>
                 <p>• Handling of hazardous materials (HazCom).</p>
-                <p>• Infection control protocols (Standard/Transmission Precautions).</p>
+                <p>• Infection control protocols.</p>
                 <p>• Proper use of Personal Protective Equipment (PPE).</p>
                 <p>• Understanding key regulatory standards.</p>
-                <p>• Interactive scenarios and knowledge checks.</p>
+                <p>• Interactive modules and knowledge checks.</p>
                  <Button asChild size="sm" className="mt-4 w-full">
                     <Link href="/training/modules">
                      View EVS Modules <ArrowRight className="ml-2 h-4 w-4" />
@@ -68,8 +68,7 @@ export default function TrainingOverviewPage() {
              </CardHeader>
              <CardContent className="space-y-2 text-sm text-foreground/80">
                 <p>• Equip supervisors to train EVS staff effectively.</p>
-                <p>• Deep dive into OSHA standards relevant to EVS training.</p>
-                <p>• Understand and teach Joint Commission EOC & IC requirements.</p>
+                <p>• Deep dive into OSHA, JC standards.</p>
                 <p>• Learn adult learning principles and teaching techniques.</p>
                 <p>• Focus on competency assessment and documentation.</p>
                 <p>• Develop effective training sessions and materials.</p>
@@ -85,9 +84,9 @@ export default function TrainingOverviewPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2"><ListChecks className="w-6 h-6 text-primary"/> Access Training Modules</CardTitle>
+          <CardTitle className="flex items-center gap-2"><ListChecks className="w-6 h-6 text-primary"/> Access Training Content</CardTitle>
           <CardDescription>
-            Choose your path: structured learning for EVS staff or specialized training for trainers. Complete modules and quizzes to track progress.
+            Choose your path: structured learning for EVS staff, specialized training for trainers, or practice in realistic simulations.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -98,21 +97,27 @@ export default function TrainingOverviewPage() {
                     width={300}
                     height={200}
                     className="rounded-md shadow-sm object-cover"
-                    data-ai-hint="hospital cleaning training online course team" // Updated hint
+                    data-ai-hint="hospital cleaning training online course team simulation" // Updated hint
                 />
                 <div className="flex-1 space-y-4">
                     <p className="text-foreground/90">
-                        Our modules provide in-depth coverage of critical cleaning procedures, safety protocols, and regulatory requirements specific to the healthcare environment. Engage with interactive content and test your knowledge. Select the appropriate pathway below to begin.
+                        Our modules provide in-depth coverage of critical cleaning procedures, safety protocols, and regulatory requirements. Engage with interactive content, test your knowledge via quizzes, and apply skills in simulated environments.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <Button asChild size="lg" className="flex-1">
                             <Link href="/training/modules">
-                            EVS Staff Training <ArrowRight className="ml-2 h-5 w-5" />
+                            EVS Modules <ArrowRight className="ml-2 h-5 w-5" />
                             </Link>
                         </Button>
                         <Button asChild size="lg" variant="secondary" className="flex-1">
                             <Link href="/training/train-the-trainer">
-                            Train the Trainer <ArrowRight className="ml-2 h-5 w-5" />
+                            Train Trainer <ArrowRight className="ml-2 h-5 w-5" />
+                            </Link>
+                        </Button>
+                         {/* Added Simulation Button */}
+                         <Button asChild size="lg" variant="outline" className="flex-1 border-primary text-primary hover:bg-primary/10">
+                            <Link href="/training/simulations">
+                                <FlaskConical className="mr-2 h-5 w-5" /> Simulations
                             </Link>
                         </Button>
                     </div>

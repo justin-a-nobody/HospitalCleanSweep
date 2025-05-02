@@ -12,7 +12,7 @@ import {
   SidebarSeparator,
   SidebarFooter,
 } from '@/components/ui/sidebar';
-import { BookOpen, CheckSquare, FileText, Home, Settings, LifeBuoy, GraduationCap, Users } from 'lucide-react'; // Added Users icon
+import { BookOpen, CheckSquare, FileText, Home, Settings, LifeBuoy, GraduationCap, Users, FlaskConical } from 'lucide-react'; // Added Users icon
 import { cn } from '@/lib/utils';
 
 export default function AppSidebarContent() {
@@ -87,6 +87,20 @@ export default function AppSidebarContent() {
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
+           {/* Added Simulations Link */}
+           <SidebarMenuItem>
+            <SidebarMenuButton
+              asChild
+              isActive={isActive('/training/simulations')}
+              tooltip={{ children: 'Training Simulations', side: 'right' }}
+            >
+              <Link href="/training/simulations">
+                <FlaskConical /> {/* Icon for simulations */}
+                <span>Simulations</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+
 
            <SidebarSeparator />
 
