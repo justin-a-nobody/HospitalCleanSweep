@@ -13,17 +13,17 @@ export default function TrainingOverviewPage() {
           <div>
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-primary">EVS Training & Certification Program</h1>
             <p className="mt-2 text-lg text-muted-foreground">
-              Elevating Hospital Cleanliness Standards Through Comprehensive Training.
+              Elevating Hospital Cleanliness Standards Through Comprehensive Training for Staff and Trainers.
             </p>
              <p className="mt-4 text-foreground/90">
-               Welcome to the CleanSweep training hub. Our program is designed to equip Environmental Services (EVS) staff with the knowledge and skills necessary to maintain the highest standards of cleanliness and safety within the hospital environment. Proper cleaning protocols are critical in preventing healthcare-associated infections (HAIs) and ensuring patient well-being.
+               Welcome to the CleanSweep training hub. Our program offers two distinct paths: one designed to equip Environmental Services (EVS) staff with essential cleaning and safety skills, and another to prepare supervisors and leads to effectively train their teams. Proper cleaning protocols are critical in preventing healthcare-associated infections (HAIs) and ensuring patient well-being.
             </p>
-             <p className="mt-4 text-foreground/90">For our Top 20 Hospital, our comprehensive training includes interactive scenarios, knowledge checks, Joint Commission Standards, OSHA Standards, and Life Safety.</p>
+             <p className="mt-4 text-foreground/90">Our comprehensive training includes interactive scenarios, knowledge checks, and covers key standards from the Joint Commission, OSHA, and Life Safety.</p>
           </div>
         </div>
       </section>
 
-       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"> {/* Changed to 3 columns for new card */}
+       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <Card className="hover:shadow-md transition-shadow">
              <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -43,13 +43,14 @@ export default function TrainingOverviewPage() {
                 <CardTitle className="flex items-center gap-2">
                     <Hospital className="w-6 h-6 text-blue-600" /> EVS Staff Program
                 </CardTitle>
+                <CardDescription>Core skills for front-line EVS technicians.</CardDescription>
              </CardHeader>
              <CardContent className="space-y-2 text-sm text-foreground/80">
                 <p>• Foundational cleaning techniques.</p>
                 <p>• Handling of hazardous materials (HazCom).</p>
-                <p>• Advanced infection control protocols.</p>
+                <p>• Infection control protocols (Standard/Transmission Precautions).</p>
                 <p>• Proper use of Personal Protective Equipment (PPE).</p>
-                <p>• Understanding Joint Commission and regulatory standards.</p>
+                <p>• Understanding key regulatory standards.</p>
                 <p>• Interactive scenarios and knowledge checks.</p>
                  <Button asChild size="sm" className="mt-4 w-full">
                     <Link href="/training/modules">
@@ -58,19 +59,21 @@ export default function TrainingOverviewPage() {
                  </Button>
              </CardContent>
           </Card>
-           <Card className="hover:shadow-md transition-shadow"> {/* New Card for Train the Trainer */}
+           <Card className="hover:shadow-md transition-shadow">
              <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                     <Users className="w-6 h-6 text-purple-600" /> Train the Trainer Program
                 </CardTitle>
+                 <CardDescription>For supervisors and leads responsible for training.</CardDescription>
              </CardHeader>
              <CardContent className="space-y-2 text-sm text-foreground/80">
-                <p>• Equip supervisors and leads to train EVS staff effectively.</p>
-                <p>• Deep dive into OSHA, JC, and EVS standards for trainers.</p>
+                <p>• Equip supervisors to train EVS staff effectively.</p>
+                <p>• Deep dive into OSHA standards relevant to EVS training.</p>
+                <p>• Understand and teach Joint Commission EOC & IC requirements.</p>
                 <p>• Learn adult learning principles and teaching techniques.</p>
                 <p>• Focus on competency assessment and documentation.</p>
                 <p>• Develop effective training sessions and materials.</p>
-                 <Button asChild size="sm" variant="outline" className="mt-4 w-full">
+                 <Button asChild size="sm" variant="secondary" className="mt-4 w-full">
                     <Link href="/training/train-the-trainer">
                      View Trainer Modules <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -82,24 +85,24 @@ export default function TrainingOverviewPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2"><ListChecks className="w-6 h-6 text-primary"/> Training Modules Access</CardTitle>
+          <CardTitle className="flex items-center gap-2"><ListChecks className="w-6 h-6 text-primary"/> Access Training Modules</CardTitle>
           <CardDescription>
-            Access structured learning modules covering essential EVS topics or specialized training for trainers. Complete modules and quizzes to track your progress.
+            Choose your path: structured learning for EVS staff or specialized training for trainers. Complete modules and quizzes to track progress.
           </CardDescription>
         </CardHeader>
         <CardContent>
             <div className="flex flex-col md:flex-row items-center gap-6">
                 <Image
                     src="https://picsum.photos/300/200" // Placeholder image
-                    alt="Training Modules Illustration"
+                    alt="Hospital cleaning staff training illustration"
                     width={300}
                     height={200}
                     className="rounded-md shadow-sm object-cover"
-                    data-ai-hint="hospital cleaning training online course" // Updated hint
+                    data-ai-hint="hospital cleaning training online course team" // Updated hint
                 />
                 <div className="flex-1 space-y-4">
                     <p className="text-foreground/90">
-                        Our modules provide in-depth coverage of critical cleaning procedures, safety protocols, and regulatory requirements specific to the healthcare environment. Engage with interactive content and test your knowledge. Choose the appropriate path below.
+                        Our modules provide in-depth coverage of critical cleaning procedures, safety protocols, and regulatory requirements specific to the healthcare environment. Engage with interactive content and test your knowledge. Select the appropriate pathway below to begin.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Button asChild size="lg" className="flex-1">

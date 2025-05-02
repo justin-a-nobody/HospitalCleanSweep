@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+import { Skeleton } from '@/components/ui/skeleton'; // Import Skeleton
 
 // Mock data structure for Train the Trainer modules
 interface TrainTheTrainerModuleSummary {
@@ -24,7 +25,7 @@ interface TrainTheTrainerModuleSummary {
 // Mock data fetching function (replace with actual data fetching)
 async function getTrainTheTrainerModulesSummary(): Promise<TrainTheTrainerModuleSummary[]> {
   // Simulate API call delay
-  await new Promise(resolve => setTimeout(resolve, 50));
+  await new Promise(resolve => setTimeout(resolve, 150)); // Slightly longer delay
 
   const modules: TrainTheTrainerModuleSummary[] = [
     {
@@ -44,8 +45,8 @@ async function getTrainTheTrainerModulesSummary(): Promise<TrainTheTrainerModule
     {
         id: 'ttt003',
         title: 'EVS Leadership & Training Delivery',
-        description: 'Develop leadership skills for trainers, focusing on effective communication, coaching, and delivering impactful training sessions.',
-        focusAreas: ['Training Delivery', 'Coaching Techniques', 'Feedback Methods', 'Program Management'],
+        description: 'Develop leadership skills for trainers, focusing on effective communication, coaching, and delivering impactful training sessions for EVS staff.',
+        focusAreas: ['Training Delivery', 'Coaching Techniques', 'Feedback Methods', 'Adult Learning', 'EVS Task Training'],
         icon: Users,
     },
   ];
@@ -85,23 +86,24 @@ export default function TrainTheTrainerListPage() {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <h1 className="text-3xl font-bold tracking-tight">Train the Trainer Modules</h1>
               {/* Placeholder Button */}
+              <Skeleton className="h-10 w-48" />
             </div>
             <p className="text-muted-foreground">Loading available trainer modules...</p>
              {/* Skeleton Loader */}
-             <div className="grid gap-4 md:grid-cols-2">
-                {[1, 2].map((i) => (
+             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {[1, 2, 3].map((i) => (
                      <Card key={i} className="flex flex-col animate-pulse">
                          <CardHeader className="flex flex-row items-start justify-between gap-4 pb-4">
                             <div className="space-y-2 flex-1">
-                                <div className="h-6 bg-muted rounded w-3/4"></div>
-                                <div className="h-4 bg-muted rounded w-full"></div>
+                                <Skeleton className="h-6 w-3/4" />
+                                <Skeleton className="h-4 w-full" />
                                 <div className="flex flex-wrap gap-1 pt-1">
-                                    <div className="h-4 bg-muted rounded w-16"></div>
-                                    <div className="h-4 bg-muted rounded w-20"></div>
+                                    <Skeleton className="h-4 w-16" />
+                                    <Skeleton className="h-4 w-20" />
                                 </div>
                             </div>
                             <div className="flex flex-col items-end gap-2 ml-4 flex-shrink-0">
-                                <div className="h-8 w-8 bg-muted rounded-md mt-1"></div>
+                                 <Skeleton className="h-8 w-8 rounded-md mt-1" />
                             </div>
                          </CardHeader>
                      </Card>
@@ -161,13 +163,13 @@ export default function TrainTheTrainerListPage() {
               </Button>
           </div>
           <p className="text-muted-foreground">
-            Select a module below to enhance your skills in training EVS staff on critical standards and procedures.
+            Select a module below to enhance your skills in training EVS staff on critical standards, procedures, and effective teaching methods.
           </p>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {modules.map((module) => {
                  const IconComponent = module.icon;
-                 const tooltipText = `View Module ${module.title}`;
+                 const tooltipText = `View Module: ${module.title}`;
 
                  return (
                      <Card key={module.id} className={cn("flex flex-col transition-shadow hover:shadow-md")}>
@@ -186,7 +188,7 @@ export default function TrainTheTrainerListPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col items-end gap-2 ml-4 flex-shrink-0">
-                                {/* Removed completion badge for now, add later if needed */}
+                                {/* No completion badge for trainer modules initially */}
                                 <Tooltip>
                                     <TooltipTrigger asChild>
                                         <Button
@@ -211,7 +213,7 @@ export default function TrainTheTrainerListPage() {
             })}
           </div>
            <div className="flex justify-center mt-6">
-             {/* <Button variant="outline">Load More</Button> */}
+             {/* Potential Pagination/Load More */}
            </div>
         </div>
     </TooltipProvider>
