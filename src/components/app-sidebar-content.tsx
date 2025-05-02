@@ -11,13 +11,21 @@ import {
   SidebarSeparator,
   SidebarFooter,
 } from '@/components/ui/sidebar';
-import { BookOpen, CheckSquare, FileText, Home, Settings, LifeBuoy } from 'lucide-react';
+import { BookOpen, CheckSquare, FileText, Home, Settings, LifeBuoy, GraduationCap } from 'lucide-react'; // Added GraduationCap
 import { cn } from '@/lib/utils';
 
 export default function AppSidebarContent() {
   const pathname = usePathname();
 
-  const isActive = (path: string) => pathname === path;
+  // Updated isActive to handle nested routes better
+  const isActive = (path: string, exact = false) => {
+    if (exact) {
+      return pathname === path;
+    }
+    // For nested routes like /training/modules/*
+    return pathname.startsWith(path);
+  };
+
 
   return (
     <>
@@ -29,7 +37,7 @@ export default function AppSidebarContent() {
            <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              isActive={isActive('/')}
+              isActive={isActive('/', true)} // Exact match for dashboard
               tooltip={{ children: 'Dashboard', side: 'right' }}
             >
               <Link href="/">
@@ -38,13 +46,26 @@ export default function AppSidebarContent() {
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
+           <SidebarMenuItem>
+            <SidebarMenuButton
+              asChild
+              isActive={isActive('/training', true)} // Training Overview Page (exact match)
+              tooltip={{ children: 'Training Overview', side: 'right' }}
+            >
+              <Link href="/training">
+                 <GraduationCap /> {/* Icon for overview */}
+                <span>Training Overview</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              isActive={isActive('/training')}
+              // isActive should check for /training/modules and its children
+              isActive={isActive('/training/modules')}
               tooltip={{ children: 'Training Modules', side: 'right' }}
             >
-              <Link href="/training">
+              <Link href="/training/modules"> {/* Link to the modules list */}
                 <BookOpen />
                 <span>Training Modules</span>
               </Link>
